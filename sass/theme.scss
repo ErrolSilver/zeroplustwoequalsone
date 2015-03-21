@@ -1,0 +1,243 @@
+$rows: 2;
+$columns: 17;
+
+$total-height: $rows * 100%;
+$total-width: $columns * 100%;
+
+$view-height: 100% / $rows;
+$view-width: 100% / $columns;
+
+$red: #f30;
+
+@import 'normalize.scss';
+@import 'base.scss';
+
+html, 
+body {
+  height: 100%;
+
+  * {
+    background-repeat: no-repeat;
+    box-sizing: border-box;
+    transition: all ease .5s;
+    will-change: transform;
+  }
+}
+
+body {
+  overflow: hidden;
+}
+
+.home {
+  color: black;
+}
+
+.red {
+  color: $red;
+}
+
+.bar {
+  background: $red;
+  bottom: 0;
+  height: 5px;
+  position: absolute;
+  right: 0;
+  width: 70px;
+}
+
+.site-wrapper {
+  height: $total-height;
+  width: $total-width;
+}
+
+.view {
+  float: left;
+  height: $view-height;
+  position: relative;
+  width: $view-width;
+}
+
+.tagline {
+  position: fixed;
+  top: 56px;
+  left: 40px;
+  width: 100%;
+  z-index: 1;
+
+  h3 {
+    position: relative;
+    top: -15px;
+  }
+
+  img {
+    display: block;
+    height: 66px;
+    margin: 0 auto;
+    position: relative;
+    right: -215px;
+    left: 215px;
+    top: -13px;
+    width: 66px;
+  }
+  &.return-home {
+
+    img {
+      left: -48%;
+      right: 0;
+    }
+  }
+}
+
+.primary-content {
+  .container {
+    display: flex;
+    height: 100%;
+    width: 100%;
+
+    .text-wrapper {
+      display: block;
+      height: 100%;
+      margin: 0 auto;
+      overflow: hidden;
+      width: 520px;
+
+      .logo-section {
+        background-image: url('../img/logo-bg.jpg');
+        margin-top: 12rem;
+        padding-top: 1.8rem;
+        padding-left: 30px;
+        padding-right: 30px;
+        height: 100%;
+
+        h1 {
+          font-size: 19.5rem;
+          font-weight: bold;
+          letter-spacing: 12px;
+          line-height: .85;
+          margin-bottom: 0;
+          text-transform: uppercase;
+
+          &+h2 {
+            margin-top: 4rem;
+          }
+        }
+
+        h2 {
+          font-size: 2.2rem;
+          margin-bottom: 7rem;
+        }
+
+        time {
+          font-size: 3.6rem;
+          font-weight: bold;
+          text-align: justify;
+
+          span {
+            display: block;
+            margin-bottom: 1.2rem;
+          }
+        }
+      }
+      
+      p:first-of-type {
+        margin-top: 50%;
+      }
+      p:last-child {
+        margin-bottom: 75%;
+      }
+    }
+  }
+}
+
+.tagline--year {
+  bottom: 10rem;
+  font-size: 3.6rem;
+  left: 18px;
+  position: absolute;
+  transform: rotate(-90deg);
+}
+
+.view-students {
+  position: absolute;
+  right: -10px;
+  top: 56%;
+  transform: rotate(90deg);
+
+  p {
+    font-weight: bold;
+    text-transform: lowercase;
+    font-size: 2.6rem;
+  }
+
+  &+.bar {
+    background: #f30;
+    bottom: 0;
+    height: 5px;
+    position: absolute;
+    right: 100px;
+    top: 65.5%;
+    width: 70px;
+  }
+}
+
+.upper-section {
+  height: 100%;
+  padding-left: 330px;
+  width: 100%;
+
+  .upper-container {
+    height: 100%;
+    width: 100%;
+
+  }
+}
+
+.name-container {
+  background-image: url('../img/person-bg.jpg');
+  background-position: bottom;
+  height: 700px;
+  left: -115px; // offset container
+  margin: 0 auto 5rem;
+  position: relative;
+  width: 650px;
+
+  h1 {
+    bottom: 180px;
+    font-size: 11rem;
+    left: 60px;
+    padding-left: 5px;
+    position: absolute;
+  }
+}
+
+.sub-container {
+  left: -115px;
+  margin: 0 auto;
+  overflow: hidden;
+  padding-left: 6.6rem;
+  position: relative;
+  width: 650px;
+  
+    p {
+      float: left;
+      margin-top: 0;
+      padding-right: 5%;
+      width: 50%;
+
+    +a {
+      float: right;
+      font-size: 2.2rem;
+      font-weight: bold;
+      margin-top: 1.8rem;
+      padding-left: 1rem;
+      padding-right: 6%;
+      text-align: right;
+      width: 50%;
+    }
+  }
+}
+
+.lower-section {
+  height: 100%;
+  width: 100%;
+}
